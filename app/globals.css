@@ -75,22 +75,16 @@ select {
   font-family: inherit;
 }
 
-
-
-.container {
-    width: 100vw;
-    background-color: white;
-    color: black;
-    padding: 1rem;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    
+.headContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;       /* fills the viewport */
+  overflow: hidden; 
 }
 
-nav ul li a:hover {
-    font-weight: bold;
-}

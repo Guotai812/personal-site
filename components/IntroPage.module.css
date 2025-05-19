@@ -1,0 +1,6 @@
+.main {
+    flex: 1;              /* takes remaining 80% */
+    padding: 1rem;
+    overflow-y: auto;     /* if hero content is tall, it scrolls here */
+    background: rgb(227, 122, 215);
+}
