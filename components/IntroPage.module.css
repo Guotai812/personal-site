@@ -1,6 +1,21 @@
 .main {
-    flex: 1;              /* takes remaining 80% */
+    flex: 1;   
     padding: 1rem;
-    overflow-y: auto;     /* if hero content is tall, it scrolls here */
-    background: rgb(227, 122, 215);
+    overflow-y: auto; 
+    background: rgb(207, 125, 234);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    font-size: 220px;
+    color: black;
+    text-align: center;
+}
+
+.bottom {
+    font-size: 130px;
+    text-align: center;
 }

@@ -1,11 +1,12 @@
 .nav {
-      flex: 0 0 7%;        /* fixed at 20% of viewport */
+      flex: 0 0 9%;        /* fixed at 20% of viewport */
       background: #333;
       color: black;
       display: flex;
       align-items: center;
       padding: 0 1rem;
       background-color: white;
+      font-size: 25px;
 }
 
   

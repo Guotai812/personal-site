@@ -84,7 +84,7 @@ html, body {
 .headContainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;       /* fills the viewport */
+  height: 100vh;
   overflow: hidden; 
 }
 
