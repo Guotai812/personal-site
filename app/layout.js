@@ -1,6 +1,6 @@
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import IntroPage from "@/components/IntroPage";
+import NavBar from "@/components/head/NavBar";
+import IntroPage from "@/components/head/IntroPage";
 
 
 export const metadata = {

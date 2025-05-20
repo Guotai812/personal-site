@@ -1,0 +1,38 @@
+.center {
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.each {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width: 30vw;
+    border: black 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 6px black;
+    
+}
+
+.actions {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;
+}
+
+.time {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.des {
+    padding-left: 2px;
+    padding-right: 2px;
+}
