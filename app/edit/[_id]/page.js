@@ -3,12 +3,11 @@ import { getExp } from "@/lib/experiences";
 import { editExp } from "@/lib/action";
 
 export default async function Edit({ params }) {
-    const { title } = params;
-    const exp = await getExp(title);
-
+    const { _id } = params;
+    const exp = await getExp(_id);
     async function handleEdit(formData) {
         "use server";
-        await editExp(title, formData);
+        await editExp(_id, formData);
     }
     return (
         <form action={handleEdit}>
