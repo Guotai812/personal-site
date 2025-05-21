@@ -20,7 +20,7 @@ export default async function ExperienceContent() {
                             <p className={classes.des}>{item.description}</p>
                             {isLogin && <div className={classes.actions}>
                             <Link href={`/edit/${encodeURIComponent(item._id.toString())}`}>EDIT</Link>
-                            <button>DELETE</button>
+                            <Link href={`/delete/${encodeURIComponent(item._id.toString())}`}>DELETE</Link>
                         </div>}
                         </div>
                     </li>
