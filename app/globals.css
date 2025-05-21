@@ -25,7 +25,7 @@ a {
 }
 
 /* Remove button, input, and textarea defaults */
-button,
+/* button,
 input,
 textarea,
 select {
@@ -37,7 +37,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
+} */
 
 /* Remove image border */
 img {
