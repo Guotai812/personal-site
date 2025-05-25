@@ -1,10 +1,8 @@
-import Link from "next/link";
 import classes from "./ExperienceContent.module.css";
 import { getExperiences } from "@/lib/experiences";
 
 
-
-let isLogin = true;
+const isLogin = false;
 
 export default async function ExperienceContent() {
     const experiences = await getExperiences();
@@ -12,21 +10,16 @@ export default async function ExperienceContent() {
         <div className={classes.center}>
             <ul>
                 {experiences.map(item => (
-                    <li key={item.title}>
+                    <li key={item._id.toString()}>
                         <div className={classes.each}>
                             {item.current &&  <p className={classes.time}>CURRENT</p>}
                             {!item.current && <p className={classes.time}>{item.startDate} - {item.endDate}</p>}
                             <p className={classes.title}>{item.title}</p>
                             <p className={classes.des}>{item.description}</p>
-                            {isLogin && <div className={classes.actions}>
-                            <Link href={`/edit/${encodeURIComponent(item._id.toString())}`}>EDIT</Link>
-                            <Link href={`/delete/${encodeURIComponent(item._id.toString())}`}>DELETE</Link>
-                        </div>}
                         </div>
                     </li>
                 ))}
             </ul>
-            {isLogin && <Link href="/add">Add</Link>}
         </div>
     );
 }

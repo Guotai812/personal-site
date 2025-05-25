@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  background-color: #f0f4f8;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  color: #0070f3;
+  margin: 0;
+}
+
+.intro {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 500px;
+  line-height: 1.6;
+}

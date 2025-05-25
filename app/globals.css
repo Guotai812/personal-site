@@ -75,16 +75,3 @@ select {
   font-family: inherit;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.headContainer {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden; 
-}
-

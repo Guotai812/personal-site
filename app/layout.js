@@ -1,6 +1,5 @@
 import "./globals.css";
 import NavBar from "@/components/head/NavBar";
-import IntroPage from "@/components/head/IntroPage";
 
 
 export const metadata = {
@@ -12,12 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div id="modal"></div>
-        <div className="headContainer">
           <NavBar />
-          <IntroPage />
-        </div>
-        {children}
+          {children}
       </body>
     </html>
   );
