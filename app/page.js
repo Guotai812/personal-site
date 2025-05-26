@@ -11,7 +11,7 @@ export default function Home() {
   }, [])
 
   const scrollToSummary = () => {
-    document.getElementById('summary')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('summary')?.scrollIntoView({ behavior: 'smooth' , block: 'center'})
   }
 
   return (
@@ -27,7 +27,7 @@ export default function Home() {
       <section id="summary" className={styles.summary}>
         <h2 className={styles.summaryTitle}>Introduction</h2>
         <p className={styles.summaryText}>
-          Hi there! I’m Guotai Xiao, a Bachelor of Computer Science student at the University of Newcastle, 
+          Hi there! I am Guotai Xiao, a Bachelor of Computer Science student at the University of Newcastle, 
           passionate about building clean, responsive full-stack applications with React, Next.js, and Spring Boot, 
           all centered on maintainable architecture.
         </p>
