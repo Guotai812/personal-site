@@ -1,9 +1,12 @@
 "use client";
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 
 export default function Home() {
-  // Smooth scroll polyfill for older browsers (optional)
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(null);
+  const [introduction, setIntroduction] = useState("");
+  
   useEffect(() => {
     if ('scrollBehavior' in document.documentElement.style === false) {
       import('smoothscroll-polyfill').then((module) => module.polyfill())
@@ -13,6 +16,21 @@ export default function Home() {
   const scrollToSummary = () => {
     document.getElementById('summary')?.scrollIntoView({ behavior: 'smooth' , block: 'center'})
   }
+  
+  useEffect(() => {
+    async function fetchIntroduction() {
+      try {
+        setLoading("loading");
+        const { content } = await (await fetch('/api/introduction')).json()
+        setIntroduction(content)  
+      } catch(error) {
+        setError(error)
+      }
+      setLoading(null);
+    }
+    fetchIntroduction();
+  }, [])
+
 
   return (
     <>
@@ -26,11 +44,9 @@ export default function Home() {
 
       <section id="summary" className={styles.summary}>
         <h2 className={styles.summaryTitle}>Introduction</h2>
-        <p className={styles.summaryText}>
-          Hi there! I am Guotai Xiao, a Bachelor of Computer Science student at the University of Newcastle, 
-          passionate about building clean, responsive full-stack applications with React, Next.js, and Spring Boot, 
-          all centered on maintainable architecture.
-        </p>
+        {loading && <p className={styles.summaryText}>{loading}</p>}
+        {error && <p className={styles.summaryText}>Fail to fetch introduction</p>}
+        <p className={styles.summaryText}>{introduction}</p>
       </section>
     </>
   )

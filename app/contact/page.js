@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 
 export default function ContactPage() {
@@ -22,6 +22,7 @@ export default function ContactPage() {
       <form className={styles.form} onSubmit={handleSubmit}>
         <input className={styles.input} name="name" placeholder="Your Name"  required />
         <input className={styles.input} name="email" type="email" placeholder="Your Email" required />
+        <input className={styles.input} name="title" type="text" placeholder="Your Title" required />
         <textarea className={styles.textarea} name="message" placeholder="Your Message" required />
         <button className={styles.button} type="submit">Send</button>
       </form>
