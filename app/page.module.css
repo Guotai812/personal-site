@@ -35,16 +35,21 @@
 }
 .summary {
   padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .summaryTitle {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333333;
+  text-align: center;
 }
 .summaryText {
+  max-width: 600px;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: break-all;
   font-size: 1.125rem;
   color: #444444;
   line-height: 1.6;

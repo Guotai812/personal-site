@@ -1,4 +1,3 @@
-// app/page.js
 "use client";
 import { useEffect } from 'react'
 import styles from './page.module.css'
@@ -26,9 +25,11 @@ export default function Home() {
       </main>
 
       <section id="summary" className={styles.summary}>
-        <h2 className={styles.summaryTitle}>Summary</h2>
+        <h2 className={styles.summaryTitle}>Introduction</h2>
         <p className={styles.summaryText}>
-          adkjhjkafhajdhkjsfhjkahldahdjajkfhadfjkhsjkdfjkajkdfjkashdhasdhashdkjajksdhjkadjkahskjdhkjahdjaksdhkjahsjkhajksdhjahsdkjahskjdhjkashdkjahsdjkajksdjkasdhj
+          Hi there! I’m Guotai Xiao, a Bachelor of Computer Science student at the University of Newcastle, 
+          passionate about building clean, responsive full-stack applications with React, Next.js, and Spring Boot, 
+          all centered on maintainable architecture.
         </p>
       </section>
     </>
