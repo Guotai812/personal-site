@@ -1,14 +1,26 @@
+/* components/NavBar.module.css */
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
-.navLeft,
-.navRight {
+/* when hidden, slide up out of view */
+.navHidden {
+  transform: translateY(-100%);
+}
+
+.navLeft, .navRight {
   list-style: none;
   display: flex;
   gap: 1.5rem;
@@ -18,12 +30,11 @@
 
 .link {
   text-decoration: none;
-  color: #333333;
+  color: #333;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   transition: background-color 0.2s ease;
 }
-
 .link:hover {
   background-color: #f5f5f5;
 }
