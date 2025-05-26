@@ -34,7 +34,7 @@ export default function NavBar() {
       </ul>
       <ul className={styles.navRight}>
         <li>
-          <Link href="https://github.com/your-github-username"
+          <Link href="https://github.com/Guotai812"
                 target="_blank" rel="noopener noreferrer"
                 className={styles.link}>GitHub</Link>
         </li>
