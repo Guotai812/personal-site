@@ -2,7 +2,13 @@ import styles from './page.module.css'
 import { getExperiences } from '@/lib/experiences'
 
 export default async function ExperiencePage() {
-  const experiences = await getExperiences()
+  let experiences;
+  try {
+    experiences = await getExperiences();
+  } catch (error) {
+    throw new Error('Failed to fetch experiences');
+  }
+
   return (
     <main className={styles.main}>
       <h1 className={styles.header}>Experience</h1>
