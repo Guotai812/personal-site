@@ -3,8 +3,8 @@ import NavBar from "@/components/head/NavBar";
 
 
 export const metadata = {
-  title: "Home",
-  description: "Home Page",
+  title: "Guotai",
+  description: "Guotai's Site",
 };
 
 export default function RootLayout({ children }) {

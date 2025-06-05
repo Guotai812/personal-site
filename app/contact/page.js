@@ -23,7 +23,7 @@ export default function ContactPage() {
         <input className={styles.input} name="name" placeholder="Your Name"  required />
         <input className={styles.input} name="email" type="email" placeholder="Your Email" required />
         <textarea className={styles.textarea} name="message" placeholder="Your Message" required />
-        <button className={styles.button} type="submit">Send</button>
+        <button className={styles.button} type="submit" >Send</button>
       </form>
       {status && <p className={styles.status}>{status}</p>}
     </main>
