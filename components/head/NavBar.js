@@ -38,11 +38,12 @@ export default function NavBar() {
                 target="_blank" rel="noopener noreferrer"
                 className={styles.link}>GitHub</Link>
         </li>
-        <li>
-          <Link href="https://twitter.com/your-twitter-handle"
-                target="_blank" rel="noopener noreferrer"
-                className={styles.link}>Twitter</Link>
-        </li>
+        {/*TODO: add my twitter later*/}
+        {/*<li>*/}
+        {/*  <Link href="https://twitter.com/your-twitter-handle"*/}
+        {/*        target="_blank" rel="noopener noreferrer"*/}
+        {/*        className={styles.link}>Twitter</Link>*/}
+        {/*</li>*/}
       </ul>
     </nav>
   )

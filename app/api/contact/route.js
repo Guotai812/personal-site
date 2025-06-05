@@ -14,12 +14,12 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(request) {
   try {
-    const { name, email, message, title } = await request.json()
+    const { name, email, message } = await request.json()
 
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.TO_EMAIL,
-      subject: title,
+      subject: `New message from ${name}`,
       text: message,
       replyTo: email
     })
